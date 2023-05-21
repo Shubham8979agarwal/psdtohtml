@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap CSS -->
+      <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="./assets/css/style.css">
+      <title>PSD06 Conversion</title>
+      <style type="text/css">
+         @font-face {font-family: 'proxima_nova_rgregular';src: url('./assets/fonts/proximanova-regular-webfont.woff') format('woff'), url('./assets/fonts/proximanova-regular-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}@font-face {font-family: 'proxima_nova_rgbold';src: url('./assets/fonts/proximanova-bold-webfont.woff') format('woff'), url('./assets/fonts/proximanova-bold-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}.leaksRoiCalc .item:nth-child(6)::after,.leaksRoiCalc .item:nth-child(6)::before{display: none;}.leaksRoiCalc .item:first-child:after,.leaksRoiCalc .item:nth-child(2):after,.leaksRoiCalc .item:nth-child(3):after,.leaksRoiCalc .item:nth-child(4):after,.leaksRoiCalc .item:nth-child(5):after {content: '';height: 4px;width: 100%;position: absolute;bottom: 8px;left: 0%;background-color: var(--primary-color);}.leaksRoiCalc .item:first-child .circle-grey,.leaksRoiCalc .item:nth-child(2) .circle-grey,.leaksRoiCalc .item:nth-child(3) .circle-grey,.leaksRoiCalc .item:nth-child(4) .circle-grey,.leaksRoiCalc .item:nth-child(5) .circle-grey {background-color: var(--primary-color);}
+      </style>
+   </head>
+   <body>
+      <!-- Header -->
+      <header class=" d-flex align-items-center justify-content-between px-3 ">
+         <div class="logo py-2">
+            <img src="./assets/images/logo.png" alt="">
+         </div>
+         <div class="right-head d-flex align-items-center gap-3">
+            <div class="head-btns d-lg-flex d-none align-items-center gap-3 py-2">
+               <a href="" class="custom-primary-btn">SUPPORT</a>
+               <div class="single-multi-btns">
+                  <div>
+                     <input type="radio" name="single-multi" id="single" checked>
+                     <label for="single">Single</label>
+                  </div>
+                  <div>
+                     <input type="radio" name="single-multi" id="multi">
+                     <label for="multi">Multi</label>
+                  </div>
+               </div>
+               <div class="btn-group edgeDropDown">
+                  <button type="button" class="btn border-1">Edge Performance Sports</button>
+                  <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                     aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+               </div>
+            </div>
+            <div class="user-box px-md-3">
+               <div class="user-profile d-flex gap-3 align-items-center py-2">
+                  <div class="user-img">
+                     <img src="./assets/images/larry.png" alt="">
+                     <span>12</span>
+                  </div>
+                  <strong class="d-none d-lg-block usr">Larry Bruce</strong>
+                  <img src="./assets/images/dropdown_icon.png" alt="" class="dp">
+               </div>
+            </div>
+            <div class=" py-2 pe-3"><img src="./assets/images/logout.png" alt=""></div>
+         </div>
+      </header>
+      <div class="main d-flex">
+         <div class="left-sideBar-container  d-md-block">
+            <div class="open-sidebar d-block d-md-none ">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+               </svg>
+            </div>
+            <div class="left-sideBar">
+               <ul class="list-unstyled text-white">
+                  <li class="d-flex gap-4 setpadding active">
+                     <img src="./assets/images/meter.png" alt="" class="sidebar-icon">
+                     <p class="sidebar-menu">Dashboard</p>
+                  </li>
+                  <li class="d-flex gap-4 setpadding">
+                     <img src="./assets/images/piechart.png" alt="" class="sidebar-icon">
+                     <p class="sidebar-menu">Chart</p>
+                  </li>
+                  <li class="d-flex gap-4 setpadding">
+                     <img src="./assets/images/location.png" alt="" class="sidebar-icon">
+                     <p class="sidebar-menu">Location</p>
+                  </li>
+                  <li class="d-flex gap-4 setpadding">
+                     <img src="./assets/images/users.png" alt="" class="sidebar-icon">
+                     <p class="sidebar-menu">Users</p>
+                  </li>
+                  <li class="d-flex gap-4 setpadding">
+                     <img src="./assets/images/settings.png" alt="" class="sidebar-icon">
+                     <p class="sidebar-menu">Settings</p>
+                  </li>
+                  <li class="d-none d-md-flex gap-4 setpadding open-sidebar">
+                     <img src="./assets/images/expand_arrow.png" alt="" class="sidebar-icon">
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="right-box">
+            <div class="right-content ">
+               <div class="d-lg-flex justify-content-between flex-xl-nowrap gap90 px-3 px-md-4 py-3"
+                  style="background-color: #f9f9fa;">
+                  <div class="w-auto align-self-center align-self-xl-start">
+                     <h6 class="primary-color fw-bold mb-0">SALES PROCESS</h6>
+                     <h3>Leaks ROI Calculator</h3>
+                     <div class="d-flex align-items-center gap-2">
+                        <span class="text-white round-primary-bg">6</span>
+                        <h5 class="mb-0">Recovered Loss Profit
+                        </h5>
+                     </div>
+                  </div>
+                  <div
+                     class="d-flex flx1 leaksRoiCalc flex-wrap flex-xl-nowrap justify-content-between  gap-xl-0 mt-4 mt-lg-0">
+                     <div class="item mt-4 mt-lg-0">
+                        <h6 class="fw-bold">Abandoned <br>
+                           Opportunities
+                        </h6>
+                        <p class="mb-0">Potentially recoverable:</p>
+                        <p class="d-flex gap-2 fw-bold">
+                           <span>$19,245</span><span>|</span><span>4
+                           Units</span>
+                        </p>
+                        <div class="circle-grey">1</div>
+                     </div>
+                     <div class="item mt-4 mt-lg-0">
+                        <h6 class="fw-bold">Unreturned <br>
+                           Inbound Messages
+                        </h6>
+                        <p class="mb-0">Potentially recoverable:</p>
+                        <p class="d-flex gap-2 fw-bold">
+                           <span>$33,105</span><span>|</span><span>10
+                           Units</span>
+                        </p>
+                        <div class="circle-grey">2</div>
+                     </div>
+                     <div class="item mt-4 mt-lg-0">
+                        <h6 class="fw-bold">Missed <br>
+                           Calls
+                        </h6>
+                        <p class="mb-0">Potentially recoverable:</p>
+                        <p class="d-flex gap-2 fw-bold">
+                           <span>$13,725</span><span>|</span><span>4
+                           Units</span>
+                        </p>
+                        <div class="circle-grey">3</div>
+                     </div>
+                     <div class="item mt-4 mt-lg-3 mt-xl-0">
+                        <h6 class="fw-bold">Digitally Capture
+                           Every Call
+                        </h6>
+                        <p class="mb-0">Potentially recoverable:</p>
+                        <p class="d-flex gap-2 fw-bold">
+                           <span>$17,130</span><span>|</span><span>5
+                           Units</span>
+                        </p>
+                        <div class="circle-grey">4</div>
+                     </div>
+                     <div class="item mt-4 mt-lg-3 mt-xl-0">
+                        <h6 class="fw-bold">Management <br>
+                           Introduction
+                        </h6>
+                        <p class="mb-0">Potentially recoverable:</p>
+                        <p class="d-flex gap-2 fw-bold">
+                           <span>$30,000</span><span>|</span><span>10
+                           Units</span>
+                        </p>
+                        <div class="circle-grey">5</div>
+                     </div>
+                     <div class="item active-item mt-4 mt-lg-3 mt-xl-0">
+                        <h6 class="fw-bold">Recoverd Lost <br>
+                           Profit Recap
+                        </h6>
+                        <p class="mb-0">Potentially recoverable:</p>
+                        <p class="d-flex gap-2 fw-bold">
+                           <span>$113,205</span><span>|</span><span>33
+                           Units</span>
+                        </p>
+                        <div class="circle-grey">6</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-3 p-md-4">
+                  <h6 class="section-heading">Focusing on the leaks in your leadership sales and CRM process total potential recovered profit</h6>
+                  <div class="review-abondOpp d-flex justify-content-between gap-md-4 py-4 flex-wrap flex-xl-nowrap">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-2"></div>
+                           <div class="col-md-8">
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th scope="col"></th>
+                                       <th scope="col" class="tableth">RECOVERED PROFIT</th>
+                                       <th scope="col" class="tableth">ADDITIONAL SALES</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td class="fw-bold01">Reviewing abandoned customers </td>
+                                       <td class="text-center primary-color fw-bold01">$19 245,00</td>
+                                       <td class="text-center primary-color fw-bold01">4</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="fw-bold01">Returning all inbound messages</td>
+                                       <td class="text-center primary-color fw-bold01">$33 105,00</td>
+                                       <td class="text-center primary-color fw-bold01">10</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="fw-bold01">Returning all missed calls</td>
+                                       <td class="text-center primary-color fw-bold01">$13 725,00</td>
+                                       <td class="text-center primary-color fw-bold01">4</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="fw-bold01">Capturing & Recording all inbound sales calls</td>
+                                       <td class="text-center primary-color fw-bold01">$13 130,00</td>
+                                       <td class="text-center primary-color fw-bold01">5</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="fw-bold01">Management introduction to 50% of floor customers</td>
+                                       <td class="text-center primary-color fw-bold01">$30 000,00</td>
+                                       <td class="text-center primary-color fw-bold01">10</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col-lg-3"></div>
+                                       <div class="col-lg-9 col-sm-12">
+                                          <div class="d-flex blue-img">
+                                             <div>
+                                                <img src="./assets/images/dollar_increasing_arrow.png" alt="">
+                                             </div>
+                                             <div>
+                                                <h1 class="primary-color mb-0 fw-bolder">$113,205</h1>
+                                                <h5 class="primary-color mb-0 fw-bold">ADDITIONAL GROSS PROFIT PER MONTH
+                                                   <img src="./assets/images/info_icon_blue_bg.png" >
+                                                </h5>
+                                             </div>
+                                             <div class="tp">
+                                                <h1 class="primary-color mb-0 fw-bolder">33</h1>
+                                                <h5 class="primary-color mb-0 fw-bold">ADDITIONAL <br> SALES
+                                                </h5>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           <div class="col-md-2"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <hr>
+               <div class="d-flex flex-wrap justify-content-end gap-2 px-4 py-5">
+                  <a href="./psd01.html" class="d-flex gap-2 border-0 grey-bg text-white rounded-1 px-3 py-2">
+                     <strong>
+                        <svg style="transform: rotate(180deg);" xmlns="http://www.w3.org/2000/svg" width="16"
+                           height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd"
+                              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                     </strong>
+                     Back
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="./assets/js/bootstrap.bundle.min.js"></script>
+      <script src="./assets/js/script.js"></script>
+   </body>
+</html>
